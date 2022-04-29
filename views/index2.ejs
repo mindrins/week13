@@ -1,0 +1,83 @@
+<!--Rinradee Phollamud Student ID:1630900981-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="profile">
+    <title>Food Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <!-- Navigation Bar -->
+        <header>
+            <nav>
+                <% obj_logo.forEach(function(logo){ %>
+                <img class="logo" src=<%=logo.img %> alt="logo">
+                <% }) %>
+                <div class ="links">
+                    <a href="#"><%=navigationbar1 %></a>
+                    <a href="#"><%=navigationbar2 %></a>
+                    <button class="button_med" href="#"><%=navigationbar3 %></button>
+                </div>
+            </nav>
+        </header>
+        <!--Contents-->
+        <section class="info">
+                <h1 class="content_font1"><%=contentfont1 %></h1>
+                <h4 class="content_font2"><%=contentfont2 %></h4>
+            <div class="icons">
+                <% obj_contentinfo.forEach(function(contentinfo){ %>
+                <div class="icon">
+                    <img src=<%= contentinfo.img %> alt="email">
+                    <p class="icon_info"><%= contentinfo.top %></p>
+                </div>
+                
+                <!--content ont use
+                <div class="icon">
+                    <img src="/images/facebook.svg" alt="facebook">
+                    <p class="icon_info">Mind Rinradee</p>
+                </div>
+                <div class="icon">
+                    <img src="/images/ig.svg" alt="instagram">
+                    <p class="icon_info">Mindrins</p>
+                </div>
+              
+            </div>
+             -->
+            <% }) %>
+        </section>
+
+        <!--feature Bar-->
+        <section class="features">
+            <% obj_feature.forEach(function(feature){ %>
+            <div class="feature">
+                <img src= <%= feature.img %>alt="dessert">
+                <div class="feature_info">
+                    <p class=" feature_top"><%= feature.top %></p>
+                    <p class=" feature_bottom"><%= feature.bottom %></p>
+                </div>
+            </div>
+            <% }) %>
+
+            <!--content not use
+            <div class="feature">
+                <img src="/images/fastfood.svg" alt="fastfood">
+                <div class="feature_info">            
+                    <p class="feature_top">Fast Food</p>
+                    <p class="feature_bottom">Enjoy with the food :-)</p>
+            </div>
+            </div>
+            -->
+            <div class="feature">
+                <div class="feature_info">
+                    <p class="feature_more"><%=contentfont3 %></p>
+                </div>   
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
